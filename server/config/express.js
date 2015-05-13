@@ -29,19 +29,20 @@ module.exports = function(app) {
 	app.use(methodOverride());
 	app.use(cookieParser());
 	app.use(passport.initialize());
-	app.use(multer({ dest: './uploads/',
-		 rename: function (fieldname, filename) {
-		    return filename+Date.now();
-		  },
-		onFileUploadStart: function (file) {
-		  console.log(file.originalname + ' is starting ...')
-		},
-		onFileUploadComplete: function (file) {
-		  console.log(file.fieldname + ' uploaded to  ' + file.path)
-		  // done=true;
-		}
-	}));
-	// app.use(multer({ dest: './uploads/' }));
+	
+	// app.use(multer({ dest: './uploads/',
+	// 	 rename: function (fieldname, filename) {
+	// 	    return filename+Date.now();
+	// 	  },
+	// 	onFileUploadStart: function (file) {
+	// 	  console.log(file.originalname + ' is starting ...')
+	// 	},
+	// 	onFileUploadComplete: function (file) {
+	// 	  console.log(file.fieldname + ' uploaded to  ' + file.path)
+	// 	  // done=true;
+	// 	}
+	// }));
+
 	
 
 	if ('production' === env) {

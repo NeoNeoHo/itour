@@ -5,9 +5,8 @@ var Upload = require('./upload.model');
 var fs = require('fs');
 
 exports.saveProfile = function(req, res) {
-	console.log(req.body);
+	console.log(req.files);
 	return res.json('File OK');
-	// console.log(req.files);
 };
 
 // Get list of uploads
