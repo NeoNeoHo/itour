@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'myappApp'
-.controller 'NgFileUploadCtrl', ($scope, Upload) ->
+.controller 'NgFileUploadCtrl', ($scope, Upload, $http) ->
 	$scope.message = 'Hello'
 	$scope.files = {}
 	$scope.myCroppedImage = ''
@@ -27,8 +27,12 @@ angular.module 'myappApp'
 	$scope.upload = (files)->
 		if files && files.length
 			_.forEach files, (file)->
+				# $http.post '/api/upload/', 
+				# 	file: file
+				# 	name: 'Benson'
 				Upload.upload {
-					url: '/api/upload/profile'
+					url: '/api/upload/'
+					name: 'Benson'
 					file: file
 				}
 				.success (data, status, headers, config)->

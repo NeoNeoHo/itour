@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 var UploadSchema = new Schema({
   name: String,
   info: String,
-  active: Boolean
+  active: Boolean,
+  img: Buffer
 });
 
 module.exports = mongoose.model('Upload', UploadSchema);

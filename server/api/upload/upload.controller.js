@@ -3,6 +3,8 @@
 var _ = require('lodash');
 var Upload = require('./upload.model');
 var fs = require('fs');
+var request = require('request');
+
 
 exports.saveProfile = function(req, res) {
 	console.log(req.files);
@@ -28,10 +30,15 @@ exports.show = function(req, res) {
 
 // Creates a new upload in the DB.
 exports.create = function(req, res) {
-	Upload.create(req.body, function(err, upload) {
-		if(err) { return handleError(res, err); }
-		return res.json(201, upload);
-	});
+	console.log(req.body.file);
+	return res.json('Yes, you are ' + req.body.name);
+	// var stream = fs.createReadStream(req.body.file);
+	// var writeStream = fs.createWriteStream('test.png');
+	// stream.pipe(writeStream);
+	// Upload.create(req.body, function(err, upload) {
+	// 	if(err) { return handleError(res, err); }
+	// 	return res.json(201, upload);
+	// });
 };
 
 // Updates an existing upload in the DB.
