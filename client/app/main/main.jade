@@ -1,9 +1,13 @@
 div(ng-include='"components/navbar/navbar.html"')
 
 .container-fluid
-  carousel
-    slide
-      img.img-responsive.img_banner(ng-src='assets/images/banner_maseratig_ranturismo.jpg', alt='I\'m Yeoman', width='100%')
+  video#pretzel-video.video-playing(preload="auto", autoplay="true", loop="loop")
+    //source(ng-src='assets/IMG_4339.mp4', type="video/mp4")
+    source(src="https://a0.muscache.com/airbnb/static/London-P1-0.mp4", type="video/mp4")
+    source(src="https://a0.muscache.com/airbnb/static/London-P1-0.webm", type="video/webm")
+  //carousel
+    //slide
+      //img.img-responsive.img_banner(ng-src='assets/images/banner_maseratig_ranturismo.jpg', alt='I\'m Yeoman', width='100%')
       div.carousel-caption
         h1 Tri
           i.fa.fa-car p
