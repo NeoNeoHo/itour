@@ -1,33 +1,17 @@
 div(ng-include='"components/navbar/navbar.html"')
 
-.container-fluid
-  video#pretzel-video.video-playing(preload="auto", autoplay="true", loop="loop")
-    //source(ng-src='assets/IMG_4339.mp4', type="video/mp4")
-    source(src="https://a0.muscache.com/airbnb/static/London-P1-0.mp4", type="video/mp4")
-    source(src="https://a0.muscache.com/airbnb/static/London-P1-0.webm", type="video/webm")
-  //carousel
-    //slide
-      //img.img-responsive.img_banner(ng-src='assets/images/banner_maseratig_ranturismo.jpg', alt='I\'m Yeoman', width='100%')
-      div.carousel-caption
-        h1 Tri
-          i.fa.fa-car p
-          br
-          h4 由超過190個國家的導遊司機帶您認識世界
-        a.btn.btn-default(href='#') 認識我們
-        div
-          p.pull-left Site Built By NeoNeoHo
-          a.btn.btn-danger.pull-right(href='https://github.com/NeoNeoHo') Subscribe on Github
+div.container-fluid-full
+	div.p1-hero-wrapper
+		div#hero
+			video#pretzel-video.video-playing(preload="auto", autoplay="true", loop="loop")
+				source(src="../assets/minshen-community.mp4", type="video/mp4")
+		//- source(src="https://a0.muscache.com/airbnb/static/London-P1-0.webm", type="video/webm")
+		div.serch-area.text-center
+			div.va-container.va-container-v.va-container-h
+				div.intro-area.va-middle
+					h2#tagline.text-branding.text-jumbo.text-contrast.row-sapce-1 當個台北人
+					div#subtitle.h4.text-contrast.row-sapce-4 文化旅行，與在地人一起
 
-.container
-  .row
-    h3.text-center The Best Place For You.
-  .row.place
-    .col-sm-4
-      img.img-responsive.img-circle(src='/assets/images/taipei.png')
-    .col-sm-4
-      img.img-responsive.img-circle(src='/assets/images/taichung.png')
-    .col-sm-4
-      img.img-responsive.img-circle(src='/assets/images/kaohsiung.png')
 
 
 
