@@ -1,4 +1,32 @@
+$white: #fff;
+$black: #000;
+
 .navbar-tide {
 	@extend .navbar;
 	margin-bottom: 0px;
+}
+
+.navbar-trans {
+	@extend .navbar-inverse;
+	color: $white;
+	background-color: transparent;
+	border-color: transparent;
+	@media (max-width: $md-device) {
+		position: relative;
+	}
+	.navbar-brand {
+		color: $white;
+	}
+	.navbar-nav {
+		> li > a {
+			color: $white;
+		}
+	}
+	.navbar-header {
+		@media (max-width: $md-device) {
+			.navbar-brand {
+				color: $black;
+			}
+		}
+	}
 }
