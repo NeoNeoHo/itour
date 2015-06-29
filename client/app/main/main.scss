@@ -1,3 +1,6 @@
+$font-size-jumbo: 60px;
+$font-weight-jumbo: 700;
+
 .container-fluid-full {
 	@extend .container-fluid;
 	padding-right: 0px;
@@ -9,6 +12,9 @@
 	position: relative;
 	height: 600px;
 	margin-top: 0px;
+	@media (max-width: 676px) {
+		height: 400px;
+	}
 }
 
 #hero {
@@ -21,8 +27,6 @@
 	overflow: hidden;
 }
 
-
-
 #pretzel-video {
 	bottom: 0;
 	position: absolute;
@@ -31,6 +35,44 @@
 		height: 100%;
 		width: auto;
 	}
+}
+
+.intro-area {
+	padding-bottom: 104px;
+}
+
+#tagline {
+	top: 95px;
+}
+
+.text-branding {
+	text-transform: uppercase;
+}
+
+.text-contrast {
+	color: #fff;
+}
+
+.text-jumbo {
+	font-size: $font-size-jumbo;
+	font-weight: $font-weight-jumbo;
+}
+
+.va-container {
+	display: table;
+	position: relative;
+}
+
+.va-container-h {
+	height: 100%;
+}
+
+.va-container-v {
+	width: 100%;
+}
+
+.va-middle {
+	vertical-align: middle;
 }
 
 .thing-form {
