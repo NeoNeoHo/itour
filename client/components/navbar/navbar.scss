@@ -13,6 +13,12 @@ $black: #000;
 	border-color: transparent;
 	@media (max-width: $md-device) {
 		position: relative;
+		.navbar-brand {
+			color: $black;
+		}
+		.navbar-nav {
+			color: $black;
+		}
 	}
 	.navbar-brand {
 		color: $white;
