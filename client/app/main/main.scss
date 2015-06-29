@@ -1,5 +1,7 @@
 $font-size-jumbo: 60px;
 $font-weight-jumbo: 700;
+$lg-device: 1099px;
+$md-device: 767px;
 
 .container-fluid-full {
 	@extend .container-fluid;
@@ -12,7 +14,7 @@ $font-weight-jumbo: 700;
 	position: relative;
 	height: 600px;
 	margin-top: 0px;
-	@media (max-width: 676px) {
+	@media (max-width: $md-device) {
 		height: 400px;
 	}
 }
@@ -31,7 +33,7 @@ $font-weight-jumbo: 700;
 	bottom: 0;
 	position: absolute;
 	width: 100%;
-	@media (max-width: 1099px) {
+	@media (max-width: $lg-device) {
 		height: 100%;
 		width: auto;
 	}
@@ -39,6 +41,20 @@ $font-weight-jumbo: 700;
 
 .intro-area {
 	padding-bottom: 104px;
+	@media (max-width: $md-device) {
+		padding: 0 12.5px;	
+	}
+}
+
+.search-area {
+	height: 550px;
+	position: relative;
+	top: 50px;
+	width: 100%;
+	@media (max-width: $md-device) {
+		height: 400px;
+		top: 0px;
+	}
 }
 
 #tagline {
