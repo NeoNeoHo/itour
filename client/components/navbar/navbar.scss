@@ -1,5 +1,13 @@
 $white: #fff;
 $black: #000;
+$comp-height: 60px;
+
+.comp {
+	height: $comp-height;
+	line-height: $comp-height;
+	margin-left: 2px;
+	position: relative;
+}
 
 .navbar-tide {
 	@extend .navbar;
@@ -20,13 +28,23 @@ $black: #000;
 			color: $black;
 		}
 	}
+	.navbar-text {
+		color: $white;
+	}
 	.navbar-brand {
 		color: $white;
 	}
 	.navbar-nav {
-		> li > a {
+		div {
+			margin-left: 10px;
+		}
+		> div > a {
 			color: $white;
 		}
+		> div > img {
+			width: $comp-height/1.5;
+		}
+
 	}
 	.navbar-header {
 		@media (max-width: $md-device) {
@@ -34,5 +52,13 @@ $black: #000;
 				color: $black;
 			}
 		}
+	}
+}
+
+.inbox-icon-container {
+	width: $comp-height;
+	position: relative;
+	.fa-envelope-o {
+		font-size: 24px;
 	}
 }

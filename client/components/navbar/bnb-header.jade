@@ -12,30 +12,30 @@ div.navbar.navbar-tide.navbar-trans.navbar-fixed-top(ng-controller='NavbarCtrl')
 		div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
 			ul.nav.navbar-nav
 
-			ul.nav.navbar-nav.navbar-right
-				li(ng-hide='isLoggedIn()', ng-class='{active: isActive("/signup")}')
+			div.nav.navbar-nav.navbar-right
+				div.comp.pull-left(ng-hide='isLoggedIn()', ng-class='{active: isActive("/signup")}')
 					a(href='/signup') Sign up
 
-				li(ng-hide='isLoggedIn()', ng-class='{active: isActive("/login")}')
+				div.comp.pull-right(ng-hide='isLoggedIn()', ng-class='{active: isActive("/login")}')
 					a(href='/login') Login
 
-				li(ng-show='isLoggedIn()')
-					p.navbar-text Welcome {{ getCurrentUser().name }}
+				div.comp.pull-left(ng-show='isLoggedIn()')
+					img.img-circle(src='../assets/images/me.jpg') 
 
-				li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
+				div.comp.pull-right(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
 					a(href='/settings')
 						span.glyphicon.glyphicon-cog
 
-				li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
+				div.comp.pull-right(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
 					a(href='', ng-click='logout()') Logout
-				li.comp.pull-right
-					a.no-crawl.text-white
+				div.comp.pull-right
+					a.text-white(href='/')
 						div.inbox-icon-container.text-center
-							i.fa.fa-envelope-o.h3.icon-pos--lower.icon-white
+							i.fa.fa-envelope-o.fa-2x
 								span.text-hide.hide inbox
 							i.alert-count.text-center.fade 0
 
-				li.dropdown
+				div.comp.dropdown.pull-right
 					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Help
 						span.caret
 
