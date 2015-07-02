@@ -2,6 +2,8 @@ $font-size-jumbo: 60px;
 $font-weight-jumbo: 700;
 $lg-device: 1099px;
 $md-device: 767px;
+$lg-device-banner-height: 600px;
+$md-device-banner-height: 400px;
 
 .container-fluid-full {
 	@extend .container-fluid;
@@ -12,10 +14,10 @@ $md-device: 767px;
 
 .p1-hero-wrapper {
 	position: relative;
-	height: 600px;
+	height: $lg-device-banner-height;
 	margin-top: 0px;
 	@media (max-width: $md-device) {
-		height: 400px;
+		height: $md-device-banner-height;
 	}
 }
 
@@ -40,25 +42,28 @@ $md-device: 767px;
 }
 
 .intro-area {
-	padding-bottom: 104px;
+	// padding-bottom: 104px;
 	@media (max-width: $md-device) {
 		padding: 0 12.5px;	
 	}
 }
 
 .search-area {
-	height: 550px;
+	height: $lg-device-banner-height - 50px;
 	position: relative;
 	top: 50px;
 	width: 100%;
 	@media (max-width: $md-device) {
-		height: 400px;
+		height: $md-device-banner-height;
 		top: 0px;
 	}
 }
 
 #tagline {
-	top: 95px;
+	margin-top: $lg-device-banner-height / 3;
+	@media (max-width: $md-device) {
+		margin-top: $md-device-banner-height / 3;
+	}
 }
 
 .text-branding {
