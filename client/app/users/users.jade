@@ -6,4 +6,15 @@ div.container-fluid-full
 			img.pretzel-video(src='../assets/images/user1.jpg')
 		div#user-img.col-lg-4.col-md-4.col-sm-4.col-xs-6
 			img.img-circle.img-thumbnail.img-half-width.center-block(src='../assets/images/me.jpg')
+div.container
+	div.jumbotron.text-center
+		h2 你好，我是濟民
+		.row
+			div.col-md-6
+				p 想要體會台北的文化，卻又害怕不得其門而入嗎？
+				p 讓我們這群生於斯 長於斯的台北人帶您認識她吧
+			div.col-md-6
+				div(style='display:inline-block')
+					datepicker.well.well-sm(ng-model="dt", min-date="minDate", show-weeks="false")
 
+div(ng-include='"components/navbar/footer.html"')
