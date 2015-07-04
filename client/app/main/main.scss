@@ -14,6 +14,7 @@ $md-device-banner-height: 400px;
 	@extend .container-fluid;
 	padding-right: 0px;
 	padding-left: 0px;
+	margin-bottom: 20px;
 }
 
 
@@ -69,6 +70,10 @@ $md-device-banner-height: 400px;
 	@media (max-width: $md-device) {
 		margin-top: $md-device-banner-height / 3;
 	}
+}
+
+.img-half-width {
+	max-width: 50%;
 }
 
 .text-branding {
