@@ -1,7 +1,8 @@
 $white: #fff;
 $black: #000;
+$gray: rgba(0, 0, 0, 0.8);
 $comp-height: 60px;
-
+$background-semi-inverse: rgba(0.5, 0.5, 0.5, 0.3);
 .comp {
 	height: $comp-height;
 	line-height: $comp-height;
@@ -14,49 +15,33 @@ $comp-height: 60px;
 	margin-bottom: 0px;
 }
 
-.navbar-trans {
+.navbar-semi-inverse {
 	@extend .navbar-inverse;
-	color: $white;
-	background-color: transparent;
-	border-color: transparent;
-	@media (max-width: $md-device) {
-		position: relative;
-		.navbar-brand {
-			color: $black;
-		}
+	@media (min-width: $md-device) {
+		background-color: $background-semi-inverse;
+		border-color: transparent;
 		.navbar-nav {
-			color: $black;
-		}
-	}
-	.navbar-text {
-		color: $white;
-	}
-	.navbar-brand {
-		color: $white;
-	}
-	.navbar-nav {
-		div {
-			margin-left: 10px;
-		}
-		> div > a {
-			color: $white;
-		}
-		> div > img {
-			width: $comp-height/1.5;
-		}
-
-	}
-	.navbar-header {
-		@media (max-width: $md-device) {
-			.navbar-brand {
-				color: $black;
+			> li {
+				> a {
+					color: $white;
+					&:hover {
+						color: $gray;
+					}
+				}
+				> p {
+					color: $white;
+				}
 			}
+			
 		}
 	}
 }
 
+#profile-sm-img {
+	width: $comp-height / 1.5;
+}
+
 .inbox-icon-container {
-	width: $comp-height;
 	position: relative;
 	.fa-envelope-o {
 		font-size: 24px;

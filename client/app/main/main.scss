@@ -5,6 +5,11 @@ $md-device: 767px;
 $lg-device-banner-height: 600px;
 $md-device-banner-height: 400px;
 
+
+.btn-semi-transparent {
+	background-color: rgba(1,1,1,0.3);
+}
+
 .container-fluid-full {
 	@extend .container-fluid;
 	padding-right: 0px;

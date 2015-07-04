@@ -1,5 +1,5 @@
 
-div.navbar.navbar-tide.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
+div.navbar.navbar-tide.navbar-semi-inverse.navbar-fixed-top(ng-controller='NavbarCtrl')
 	div.container
 		div.navbar-header
 			button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed')
@@ -18,17 +18,28 @@ div.navbar.navbar-tide.navbar-inverse.navbar-static-top(ng-controller='NavbarCtr
 
 				li(ng-hide='isLoggedIn()', ng-class='{active: isActive("/login")}')
 					a(href='/login') Login
+				li.dropdown(ng-show='isLoggedIn()')
+					p.navbar-text 哈囉！ {{ getCurrentUser().name }}
+				li.dropdown(ng-show='isLoggedIn()')
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+						img.img-circle#profile-sm-img(src='../assets/images/me.jpg')
+					ul.dropdown-menu(role='menu')
+						li
+							a(href='#') profile
+						li
+							a(href='#') Trip Schedule
+						li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
+							a(href='', ng-click='logout()') Logout
 
 				li(ng-show='isLoggedIn()')
-					p.navbar-text Welcome {{ getCurrentUser().name }}
-
+					a.text-white(href='/')
+						div.inbox-icon-container
+							i.fa.fa-envelope-o.fa-2x
+								span.text-hide.hide inbox
+							i.alert-count.text-center.fade 0
 				li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
 					a(href='/settings')
 						span.glyphicon.glyphicon-cog
-
-				li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
-					a(href='', ng-click='logout()') Logout
-
 				li.dropdown
 					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Help
 						span.caret
@@ -38,3 +49,4 @@ div.navbar.navbar-tide.navbar-inverse.navbar-static-top(ng-controller='NavbarCtr
 							a(href='#') Help Topic 1
 						li
 							a(href='#') Help Topic 2
+						
