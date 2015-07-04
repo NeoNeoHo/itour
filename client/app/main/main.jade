@@ -1,17 +1,17 @@
-div(ng-include='"components/navbar/navbar.html"')
+div(ng-include='"components/navbar/navbar-frontpage.html"')
 
 div.container-fluid-full
 	div.p1-hero-wrapper
-		div#hero
-			video#pretzel-video.video-playing(preload="auto", autoplay="true", loop="loop")
+		div.hero
+			video.pretzel-video.video-playing(preload="auto", autoplay="true", loop="loop")
 				source(src="../assets/videos/minshen-community.mp4", type="video/mp4")
 				source(src="../assets/videos/minshen-community.webm", type="video/webm")
 		div.search-area.text-center
 			div.va-container.va-container-v.va-container-h
 				div.intro-area.va-middle
 					h2#tagline.text-branding.text-jumbo.text-contrast.row-sapce-1 當個台北人
-					div#subtitle.h4.text-contrast.row-sapce-4 文化旅行，與在地人一起 
-					a.btn.btn-default.hide-sm.text-contrast.btn-lg.btn-semi-transparent(href='/#')  一探究竟
+					div#subtitle.h4.text-contrast.row-sapce-4 文化旅行，與在地人一起
+					a.btn.btn-default.hide-sm.text-contrast.btn-lg.btn-semi-transparent(href='/users')  一探究竟
 
 div.container
 	div.jumbotron.text-center
@@ -19,7 +19,7 @@ div.container
 		p 想要體會台北的文化，卻又害怕不得其門而入嗎？
 		p 讓我們這群生於斯 長於斯的台北人帶您認識她吧
 		p
-			a.btn.btn-default.btn-lg(href="#", role="button") 一探究竟
+			a.btn.btn-default.btn-lg(href="/users", role="button") 一探究竟
 	div.row
 		div.col-md-4
 			div.well.well-lg

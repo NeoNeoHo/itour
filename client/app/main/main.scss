@@ -4,7 +4,8 @@ $lg-device: 1099px;
 $md-device: 767px;
 $lg-device-banner-height: 600px;
 $md-device-banner-height: 400px;
-
+$lg-device-user-height: 400px;
+$md-device-user-height: 400px;
 
 .btn-semi-transparent {
 	background-color: rgba(1,1,1,0.3);
@@ -27,7 +28,15 @@ $md-device-banner-height: 400px;
 	}
 }
 
-#hero {
+.p2-hero-wrapper {
+	@extend .p1-hero-wrapper;
+	height: $lg-device-user-height;
+	@media (max-width: $md-device) {
+		height: $md-device-user-height;
+	}
+}
+
+.hero {
 	z-index: -1;
 	position: absolute;
 	right: 0;
@@ -37,7 +46,7 @@ $md-device-banner-height: 400px;
 	overflow: hidden;
 }
 
-#pretzel-video {
+.pretzel-video {
 	bottom: 0;
 	position: absolute;
 	width: 100%;
@@ -50,7 +59,7 @@ $md-device-banner-height: 400px;
 .intro-area {
 	// padding-bottom: 104px;
 	@media (max-width: $md-device) {
-		padding: 0 12.5px;	
+		padding: 0 12.5px;
 	}
 }
 
@@ -140,4 +149,9 @@ $md-device-banner-height: 400px;
 
 .container {
 	color: #222;
+}
+
+#user-img {
+	position:absolute;
+	bottom: -60px;
 }
